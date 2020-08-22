@@ -19,6 +19,7 @@ function Movie({ title, fetchUrl, verticalImg }) {
   }, [fetchUrl]);
 
   const handleClick = (movie) => {
+    console.clear();
     if (trailerUrl) setTrailerUrl('');
     movieTrailer(movie.title || movie.name || movie.original_name)
       .then((url) => {
