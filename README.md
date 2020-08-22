@@ -11,4 +11,4 @@ $ yarn install
 
 # open http://localhost:3000
 $ yarn start
-``
+```
