@@ -18,16 +18,27 @@ function Movie({ title, fetchUrl, verticalImg }) {
     <article className="movie-area">
       <h3>{title}</h3>
       <aside className="movie-list">
-        {movies.map((movie) => (
-          <img
-            className={verticalImg && 'vertical_poster'}
-            key={movie.id}
-            src={`${imgUrl}${
-              verticalImg ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie.title || movie.name || movie.original_name}
-          />
-        ))}
+        {movies.map(
+          (movie) =>
+            movie.backdrop_path && (
+              <div
+                key={movie.id}
+                className={`movie ${verticalImg && 'vertical_poster'}`}
+              >
+                <img
+                  src={`${imgUrl}${
+                    verticalImg ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.title || movie.name || movie.original_name}
+                />
+                <div className="dim">
+                  <strong>
+                    {movie.title || movie.name || movie.original_name}
+                  </strong>
+                </div>
+              </div>
+            ),
+        )}
       </aside>
     </article>
   );

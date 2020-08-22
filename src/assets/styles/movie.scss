@@ -12,34 +12,70 @@ article.movie-area {
   }
 
   aside.movie-list {
-    display: flex;
+    display: block;
     width: 100%;
-    padding: 20px;
+    overflow-y: hidden;
     overflow-x: scroll;
-    padding-left: 10px;
+    padding: 20px 10px 20px;
+    white-space: nowrap;
 
-    img {
-      width: 100%;
-      object-fit: contain;
-      max-height: 150px;
-      transition: transform 0.5s;
+    .movie {
+      position: relative;
+      width: auto;
+      display: inline-block;
+      height: 150px;
+      margin-right: 10px;
       cursor: pointer;
 
       &.vertical_poster {
-        max-height: 300px;
+        height: 300px;
       }
 
-      & + img {
-        margin-left: 10px;
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s;
       }
+
+      .dim {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        strong {
+          padding: 0 10px;
+          box-sizing: border-box;
+          text-align: center;
+          line-height: 22px;
+          display: block;
+          font-size: 16px;
+          color: #fff;
+          font-weight: bold;
+          white-space: normal;
+        }
+      }
+
       &:hover {
+        z-index: 1;
+      }
+      &:hover img {
         transform: scale(1.1);
       }
+
+      &:hover .dim {
+        transform: scale(1.1);
+        opacity: 1;
+      }
     }
-
-    // &::-webkit-scrollbar {
-
-    // }
 
     &::-webkit-scrollbar {
       background: none;
