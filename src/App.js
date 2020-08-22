@@ -1,16 +1,13 @@
 import React from 'react';
-import Header from './components/Header';
-import './assets/styles/common/reset.scss';
-import Template from './layout/Template';
-import Container from './components/Container';
+import Layout from './layout/Layout';
+import MovieContainer from './containers/MovieContainer';
 
 function App() {
   return (
     <>
-      <Template>
-        <Header />
-        <Container />
-      </Template>
+      <Layout>
+        <MovieContainer />
+      </Layout>
     </>
   );
 }

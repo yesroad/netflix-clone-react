@@ -1,0 +1,45 @@
+article.movie-area {
+  max-width: 100%;
+  padding: 0 20px;
+  background: #000;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+
+  aside.movie-list {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    overflow-x: scroll;
+    padding-left: 10px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      max-height: 150px;
+      transition: transform 0.5s;
+      cursor: pointer;
+
+      &.vertical_poster {
+        max-height: 300px;
+      }
+
+      & + img {
+        margin-left: 10px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
