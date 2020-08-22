@@ -14,5 +14,4 @@ export const request = {
   fetchComedy: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
   fetchHorror: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   fetchRomance: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-  fetchDocumentary: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
 };

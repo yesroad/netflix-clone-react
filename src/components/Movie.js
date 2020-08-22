@@ -6,14 +6,13 @@ function Movie({ title, fetchUrl, verticalImg }) {
   const imgUrl = 'https://image.tmdb.org/t/p/original/';
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    async function fetchData() {
+    async function fetchDatas() {
       const getMovies = await instance.get(fetchUrl);
       setMovies(getMovies.data.results);
       return getMovies;
     }
-    fetchData();
+    fetchDatas();
   }, [fetchUrl]);
-  console.log(movies);
 
   return (
     <article className="movie-area">
@@ -26,7 +25,7 @@ function Movie({ title, fetchUrl, verticalImg }) {
             src={`${imgUrl}${
               verticalImg ? movie.poster_path : movie.backdrop_path
             }`}
-            alt={movie.name}
+            alt={movie.title || movie.name || movie.original_name}
           />
         ))}
       </aside>

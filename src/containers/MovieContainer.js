@@ -10,13 +10,12 @@ function MovieContainer() {
         fetchUrl={request.fetchOriginal}
         verticalImg={true}
       />
-      <Movie title="NETFLIX ORIGINALS2" fetchUrl={request.fetchTopRated} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchTrend} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchAction} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchComedy} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchHorror} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchRomance} />
-      <Movie title="NETFLIX ORIGINALS3" fetchUrl={request.fetchDocumentary} />
+      <Movie title="Top Rated" fetchUrl={request.fetchTopRated} />
+      <Movie title="Trend Now" fetchUrl={request.fetchTrend} />
+      <Movie title="Action" fetchUrl={request.fetchAction} />
+      <Movie title="Comedy" fetchUrl={request.fetchComedy} />
+      <Movie title="Horror" fetchUrl={request.fetchHorror} />
+      <Movie title="Romance" fetchUrl={request.fetchRomance} />
     </>
   );
 }
