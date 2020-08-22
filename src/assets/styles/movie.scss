@@ -1,7 +1,6 @@
 article.movie-area {
   max-width: 100%;
   padding: 0 20px;
-  background: #000;
   overflow-x: hidden;
   padding-top: 20px;
 
@@ -38,8 +37,20 @@ article.movie-area {
       }
     }
 
+    // &::-webkit-scrollbar {
+
+    // }
+
     &::-webkit-scrollbar {
-      display: none;
+      background: none;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #e50914;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: none;
     }
   }
 }
